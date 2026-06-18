@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스마트 웨이팅 시스템</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <div class="app">
+    <header class="app-header">
+      <button class="header-button menu-button" data-menu-open aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="plaza-icon" aria-hidden="true"><i></i></span>
+        <span>
+          <strong>스마트 웨이팅</strong>
+          <small>AI Digital Plaza</small>
+        </span>
+      </a>
+      <span class="service-icon" aria-hidden="true"></span>
+    </header>
+
+    <nav class="top-tabs" aria-label="주요 페이지">
+      <a class="active" href="index.html">예약</a>
+      <a href="ticket.html">대기표</a>
+      <a href="info.html">안내</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p>실시간 예약권 기반</p>
+          <h1>기다림이 짧은 콘텐츠부터 확인하세요</h1>
+        </div>
+        <div class="hero-clock">
+          <span>현재 시각</span>
+          <strong id="nowTime">--:--</strong>
+        </div>
+      </section>
+
+      <section class="summary-row">
+        <div><strong id="totalWaiting">0</strong><span>대기 인원</span></div>
+        <div><strong id="avgWait">0분</strong><span>평균 대기</span></div>
+        <div><strong id="fastEntry">--:--</strong><span>빠른 입장</span></div>
+      </section>
+
+      <section class="filter-row" aria-label="콘텐츠 필터">
+        <button class="active" data-filter="all">전체</button>
+        <button data-filter="fast">바로 이용</button>
+        <button data-filter="busy">혼잡</button>
+      </section>
+
+      <section class="card-list" id="contentList" aria-label="콘텐츠 목록"></section>
+    </main>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" data-menu-close aria-label="메뉴 닫기">닫기</button>
+      <strong>스마트 웨이팅</strong>
+      <a href="index.html">예약 현황</a>
+      <a href="ticket.html">대기표 등록</a>
+      <a href="info.html">서비스 안내</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

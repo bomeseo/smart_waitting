@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상세 정보 | 스마트 웨이팅 시스템</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="detail">
+  <div class="app">
+    <header class="app-header">
+      <button class="header-button menu-button" data-menu-open aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <span class="plaza-icon" aria-hidden="true"><i></i></span>
+        <span><strong>스마트 웨이팅</strong><small>AI Digital Plaza</small></span>
+      </a>
+      <span class="service-icon" aria-hidden="true"></span>
+    </header>
+
+    <main id="detailRoot"></main>
+  </div>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" data-menu-close aria-label="메뉴 닫기">닫기</button>
+      <strong>스마트 웨이팅</strong>
+      <a href="index.html">예약 현황</a>
+      <a href="ticket.html">대기표 등록</a>
+      <a href="info.html">서비스 안내</a>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
