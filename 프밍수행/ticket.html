@@ -9,14 +9,14 @@
 <body data-page="ticket">
   <div class="app">
     <header class="app-header">
+      <span class="service-icon" aria-hidden="true"></span>
+      <a class="brand" href="index.html" aria-label="홈으로 이동">
+        <img class="brand-logo" src="assets/apple-logo.png" alt="임시 서비스 로고">
+        <span><strong>스마트 웨이팅</strong><small>AI Digital Plaza</small></span>
+      </a>
       <button class="header-button menu-button" data-menu-open aria-label="메뉴 열기">
         <span></span><span></span><span></span>
       </button>
-      <a class="brand" href="index.html" aria-label="홈으로 이동">
-        <span class="plaza-icon" aria-hidden="true"><i></i></span>
-        <span><strong>스마트 웨이팅</strong><small>AI Digital Plaza</small></span>
-      </a>
-      <span class="service-icon" aria-hidden="true"></span>
     </header>
 
     <nav class="top-tabs" aria-label="주요 페이지">
@@ -34,7 +34,12 @@
       <section class="form-card">
         <label>
           콘텐츠 선택
-          <select id="ticketContent"></select>
+          <select id="ticketContent">
+            <option value="vr">VR 건강 체험</option>
+            <option value="photo">AI 사진관</option>
+            <option value="kiosk">키오스크 연습</option>
+            <option value="robot">돌봄 로봇 체험</option>
+          </select>
         </label>
         <label>
           발행 인원
@@ -58,6 +63,7 @@
       <a href="index.html">예약 현황</a>
       <a href="ticket.html">대기표 등록</a>
       <a href="info.html">서비스 안내</a>
+      <a href="desktop.html">데스크탑 화면</a>
     </div>
   </aside>
 

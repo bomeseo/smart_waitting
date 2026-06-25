@@ -9,17 +9,17 @@
 <body data-page="home">
   <div class="app">
     <header class="app-header">
-      <button class="header-button menu-button" data-menu-open aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
+      <span class="service-icon" aria-hidden="true"></span>
       <a class="brand" href="index.html" aria-label="홈으로 이동">
-        <span class="plaza-icon" aria-hidden="true"><i></i></span>
+        <img class="brand-logo" src="assets/apple-logo.png" alt="임시 서비스 로고">
         <span>
           <strong>스마트 웨이팅</strong>
           <small>AI Digital Plaza</small>
         </span>
       </a>
-      <span class="service-icon" aria-hidden="true"></span>
+      <button class="header-button menu-button" data-menu-open aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
     </header>
 
     <nav class="top-tabs" aria-label="주요 페이지">
@@ -52,7 +52,75 @@
         <button data-filter="busy">혼잡</button>
       </section>
 
-      <section class="card-list" id="contentList" aria-label="콘텐츠 목록"></section>
+      <section class="card-list" aria-label="콘텐츠 목록">
+        <article class="content-card" data-card="vr">
+          <div class="visual visual-vr"><img src="assets/apple-content.jpg" alt="" aria-hidden="true"><span class="card-tag" data-status>예약 가능</span></div>
+          <div class="wait-badge"><span>예상대기</span><strong data-wait>0</strong><small>분</small></div>
+          <div class="card-body">
+            <h2>VR 건강 체험</h2>
+            <p>균형 감각과 가벼운 운동 동작을 가상 공간에서 체험합니다.</p>
+            <div class="meta">
+              <span data-people>대기 0명</span>
+              <span data-average>평균 0분</span>
+              <span data-entry>입장 --:--</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="primary" data-issue="vr">대기표 받기</button>
+          </div>
+        </article>
+
+        <article class="content-card" data-card="photo">
+          <div class="visual visual-photo"><img src="assets/apple-content.jpg" alt="" aria-hidden="true"><span class="card-tag" data-status>예약 가능</span></div>
+          <div class="wait-badge"><span>예상대기</span><strong data-wait>0</strong><small>분</small></div>
+          <div class="card-body">
+            <h2>AI 사진관</h2>
+            <p>사진 촬영 후 인공지능 보정으로 프로필 이미지를 제작합니다.</p>
+            <div class="meta">
+              <span data-people>대기 0명</span>
+              <span data-average>평균 0분</span>
+              <span data-entry>입장 --:--</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="primary" data-issue="photo">대기표 받기</button>
+          </div>
+        </article>
+
+        <article class="content-card" data-card="kiosk">
+          <div class="visual visual-kiosk"><img src="assets/apple-content.jpg" alt="" aria-hidden="true"><span class="card-tag" data-status>예약 가능</span></div>
+          <div class="wait-badge"><span>예상대기</span><strong data-wait>0</strong><small>분</small></div>
+          <div class="card-body">
+            <h2>키오스크 연습</h2>
+            <p>주문, 결제, 발권 과정을 실제 상황처럼 천천히 연습합니다.</p>
+            <div class="meta">
+              <span data-people>대기 0명</span>
+              <span data-average>평균 0분</span>
+              <span data-entry>입장 --:--</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="primary" data-issue="kiosk">대기표 받기</button>
+          </div>
+        </article>
+
+        <article class="content-card" data-card="robot">
+          <div class="visual visual-robot"><img src="assets/apple-content.jpg" alt="" aria-hidden="true"><span class="card-tag" data-status>예약 가능</span></div>
+          <div class="wait-badge"><span>예상대기</span><strong data-wait>0</strong><small>분</small></div>
+          <div class="card-body">
+            <h2>돌봄 로봇 체험</h2>
+            <p>음성 안내와 생활 보조 기능을 직접 확인합니다.</p>
+            <div class="meta">
+              <span data-people>대기 0명</span>
+              <span data-average>평균 0분</span>
+              <span data-entry>입장 --:--</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button class="primary" data-issue="robot">대기표 받기</button>
+          </div>
+        </article>
+      </section>
     </main>
   </div>
 
@@ -63,6 +131,7 @@
       <a href="index.html">예약 현황</a>
       <a href="ticket.html">대기표 등록</a>
       <a href="info.html">서비스 안내</a>
+      <a href="desktop.html">데스크탑 화면</a>
     </div>
   </aside>
 
