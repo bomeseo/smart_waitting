@@ -218,7 +218,7 @@ main {
 
 .hero p {
   margin: 0 0 7px;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, .76);
   font-size: 12px;
   font-weight: 900;
 }
@@ -235,7 +235,7 @@ main {
   min-width: 78px;
   padding: 10px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, .14);
   text-align: right;
 }
 
@@ -243,7 +243,7 @@ main {
 .summary-row span {
   display: block;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, .72);
   font-weight: 900;
 }
 
@@ -422,13 +422,6 @@ main {
   font-weight: 800;
 }
 
-.card-actions {
-  display: block;
-  padding: 0 16px 15px;
-}
-
-.card-actions button,
-.card-actions a,
 .primary-action {
   min-height: 40px;
   display: grid;
@@ -442,7 +435,6 @@ main {
   width: 100%;
 }
 
-.card-actions .primary,
 .primary-action {
   border-color: var(--accent, var(--primary));
   background: var(--accent, var(--primary));
