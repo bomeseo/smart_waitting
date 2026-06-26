@@ -106,7 +106,6 @@
       const count = Math.max(1, Number($("#ticketCount").value || 1));
 
       item.reserved += count;
-      core.saveContents();
       showToast(`${item.name} 대기표 ${count}장을 등록했습니다.`);
     });
   }
