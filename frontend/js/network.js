@@ -6,10 +6,6 @@ import {wingAPI} from ".././wingAPI/src/script/wingAPI.js"
     await wing.connect("ws://localhost:4000")
 
 
-    // const n = Math.floor(Date.now())
-    // wing.signup(`USER:${n}`,'1234')
-    // wing.login(`USER:${n}`,'1234')  
-
     const currentFileName = window.location.pathname.split('/').pop();
     if (currentFileName === 'ticket.html') {
         const issueTicket_btn = document.getElementById('issueTicket')
@@ -29,7 +25,7 @@ import {wingAPI} from ".././wingAPI/src/script/wingAPI.js"
         
         if (code == 'renew'){
             console.log(data.all)
-            window.SmartWaitingData = {startAdt: Date.now(), contnets: data.all}
+            window.SmartWaitingData = { startedAt: Date.now(), contents: data.all };
         }
 
     })

@@ -4,7 +4,6 @@
 // 이 파일은 HTML을 생성하지 않습니다.
 // 이미 HTML 문서에 있는 data-* 요소의 텍스트와 상태만 갱신합니다.
 (function () {
-  const core = window.SmartWaitingCore;
   let activeFilter = "all";
 
   function $(selector, root = document) {
@@ -71,8 +70,11 @@
   }
 
   function renderHomePage() {
+    const core = window.SmartWaitingCore;
+    if (!core || !core.contents) return; // 코어 데이터가 없으면 렌더링 스킵
+
     const summary = core.summary();
-    $("#nowTime").textContent = core.clock(new Date());
+    // $("#nowTime").textContent = core.clock(new Date());
     $("#totalWaiting").textContent = summary.totalWaiting;
     $("#avgWait").textContent = `${summary.averageWait}분`;
     $("#fastEntry").textContent = summary.fastEntry;
@@ -80,6 +82,9 @@
   }
 
   function updateContentCard(item) {
+    const core = window.SmartWaitingCore;
+    if (!core) return;
+
     const card = $(`[data-card="${item.id}"]`);
     if (!card) return;
 
@@ -102,6 +107,9 @@
     if (document.body.dataset.page !== "ticket") return;
 
     $("#issueTicket").addEventListener("click", () => {
+      const core = window.SmartWaitingCore;
+      if (!core) return;
+
       const item = core.findContent($("#ticketContent").value);
       const count = Math.max(1, Number($("#ticketCount").value || 1));
 
@@ -118,6 +126,9 @@
   }
 
   function renderDesktopPage() {
+    const core = window.SmartWaitingCore;
+    if (!core) return;
+
     const summary = core.summary();
     $("[data-desktop-waiting]").textContent = summary.totalWaiting;
     $("[data-desktop-average]").textContent = `${summary.averageWait}분`;

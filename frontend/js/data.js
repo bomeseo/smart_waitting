@@ -24,17 +24,17 @@ window.SmartWaitingData = [
   {
     id: "kiosk",
     name: "키오스크 연습",
-    reserved: 21,
-    completed: 12,
-    average: 6,
+    reserved: 0,
+    completed: 0,
+    average: 0,
     accent: "#d97706"
   },
   {
     id: "robot",
     name: "돌봄 로봇 체험",
-    reserved: 11,
-    completed: 8,
-    average: 9,
+    reserved: 0,
+    completed: 0,
+    average: 0,
     accent: "#6b5bd6"
   }
 ];
